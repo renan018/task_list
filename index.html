@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Renan Arguelho Chaparro">
+<meta name="description" content="todo list, task list">
+<meta charset="utf-8">
+<title>tasks to accomplished</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregaTasks()">
+<noscript>
+Turn on your Javascript to this page works!
+</noscript>
+<main>
+<dialog>Do you want to delete all of your itens?<br>
+<button onclick="deleteAll()">Yes</button>
+<button onclick="this.parentNode.close()" id="btnNo">No</button>
+</dialog>
+<form name="formp">
+<label for="task">Task</label>
+<input type="text" id="task" placeholder="TODO LIST">
+<input type="submit" onclick="adiciona(); event.preventDefault();" value="Send">
+<br>
+<br>
+<button onclick="remove();event.preventDefault();">Delete</button>
+<button onclick="openConfirmAction(event)" id="deleteAll">Delete All</button>
+</form>
+<section>
+<h4 contentEditable="true" title="Content Editable" onblur="titles()" id="title">Your Title Here</h4>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
