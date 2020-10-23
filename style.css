@@ -4,16 +4,23 @@ body{
 	font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
     font-size: 81.25%;
 }
-main{
-	display: grid;
-	grid-template-columns: .5fr 1.5fr 1fr;
+@media screen and (max-width: 700px) {
+	main{
+		margin: 5px !important;
+		max-width: 100% !important; 
+	}
 }
-#editor{
+main{
+	/*display: grid;
+	grid-template-columns: .5fr 1.5fr 1fr;*/
+	margin: 10px 20%;
 	background-color:#292a2d; 
 	box-shadow: 6px 6px 6px #111;
-	width: 100%; 
+	max-width: 80%; 
+	min-width: 350px;
 	padding: 40px;
 	border-radius: 10px;
+	box-sizing: border-box;
 }
 span{outline:none; color: #7da09a}
 dialog::backdrop{
