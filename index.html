@@ -5,7 +5,7 @@
 <meta name="author" content="Renan Arguelho Chaparro">
 <meta name="description" content="todo list, task list">
 <meta charset="utf-8">
-<title>tasks to accomplished</title>
+<title>Task List</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body onload="carregaTasks()">
@@ -13,22 +13,25 @@
 Turn on your Javascript to this page works!
 </noscript>
 <main>
+<div>
 <dialog>Do you want to delete all of your itens?<br>
 <button onclick="deleteAll()">Yes</button>
 <button onclick="this.parentNode.close()" id="btnNo">No</button>
 </dialog>
+</div>
+<div id="editor">
 <form name="formp">
-<label for="task">Task</label>
-<input type="text" id="task" placeholder="TODO LIST">
-<input type="submit" onclick="adiciona(); event.preventDefault();" value="Send">
+<input type="text" autocomplete="off" id="task" placeholder="Type the task and hit enter">
 <br>
 <br>
-<button onclick="remove();event.preventDefault();">Delete</button>
+<button onclick="remove(event);">Delete</button>
 <button onclick="openConfirmAction(event)" id="deleteAll">Delete All</button>
 </form>
 <section>
-<h4 contentEditable="true" title="Content Editable" onblur="titles()" id="title">Your Title Here</h4>
+<h4 contentEditable="true" title="Content Editable" onblur="titles()" id="title">click here to add a title</h4>
 </section>
+</div>
+<div></div>
 </main>
 <script src="script.js"></script>
 </body>

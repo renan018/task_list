@@ -5,24 +5,20 @@ body{
     font-size: 81.25%;
 }
 main{
+	display: grid;
+	grid-template-columns: .5fr 1.5fr 1fr;
+}
+#editor{
 	background-color:#292a2d; 
 	box-shadow: 6px 6px 6px #111;
-	width: 360px; 
-	padding: 40px 5px 40px 40px;
+	width: 100%; 
+	padding: 40px;
 	border-radius: 10px;
-}
-#deleteAll {
-	float: right;
-    margin-right: 103px;
 }
 span{outline:none; color: #7da09a}
 dialog::backdrop{
 	background-color:rgba(41, 42, 45, 0.5);
 }
-dialog>button {
-	margin-top: 4px;
-}
-#btnNo {float:right}
 .riscado{text-decoration: line-through}
 
 
